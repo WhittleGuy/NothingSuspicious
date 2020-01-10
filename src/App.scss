@@ -7,14 +7,14 @@
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 4em;
   font-family: "Oswald", "Lato", "Monserrat", sans-serif;
   transform: skew(15deg);
   @include header-style;
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 2em;
   font-family: "Oswald", "Lato", "Monserrat", sans-serif;
   transform: skew(15deg);
   @include header-style;
@@ -22,7 +22,7 @@ h3 {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 0.75em;
   font-family: "Montserrat";
   color: white;
   line-height: 1.7em;

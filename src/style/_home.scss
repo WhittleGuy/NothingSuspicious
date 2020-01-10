@@ -7,24 +7,24 @@
     width: 100%;
     min-height: 20vh;
     text-align: center;
-    animation: titleswell 4s infinite ease-in-out;
+    animation: titleswell 4s infinite ease;
   }
 
   @keyframes titleswell {
     0% {
-      font-size: 6em;
+      font-size: 4em;
     }
     25% {
-      font-size: 7em;
+      font-size: 5em;
     }
     50% {
-      font-size: 6em;
+      font-size: 4em;
     }
     75% {
-      font-size: 7em;
+      font-size: 3em;
     }
     100% {
-      font-size: 6em;
+      font-size: 4em;
     }
   }
 }
