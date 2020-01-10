@@ -64,6 +64,7 @@ a {
 }
 
 nav {
+  z-index: 3;
   width: 50px;
   height: 100vh;
   position: fixed;
@@ -77,7 +78,7 @@ nav {
   -ms-grid-rows: 10% 50% 15% 20% 4%;
       grid-template-rows: 10% 50% 15% 20% 4%;
   background: #111111;
-  border-right: 2px solid transparent;
+  border-right: 1px solid transparent;
   -o-border-image: linear-gradient(155deg, #ff5ffc 0%, #17beb9 100%);
      border-image: linear-gradient(155deg, #ff5ffc 0%, #17beb9 100%);
   border-image-slice: 1;
@@ -202,12 +203,12 @@ nav .nav-links__small .nav-link__small {
 }
 
 .twitter-container .twitter {
-  width: 150px;
-  height: 40px;
+  width: 75px;
+  height: 25px;
   background: #1da1f2;
   color: white;
   font-family: "helvetica", sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   text-decoration: none;
   display: -ms-grid;
   display: grid;
@@ -227,7 +228,7 @@ nav .nav-links__small .nav-link__small {
   position: fixed;
   z-index: 5;
   top: 0;
-  left: 45px;
+  left: 51px;
   bottom: 0;
   right: 0;
   width: 100%;
@@ -247,16 +248,16 @@ nav .nav-links__small .nav-link__small {
 .modal-wrapper .close-button {
   position: absolute;
   bottom: 15%;
-  left: 50%;
-  -webkit-transform: translateX(-60%);
-          transform: translateX(-60%);
+  left: calc((100% - 50px) / 2);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .modal-wrapper .modal-content {
   width: 80%;
   min-height: 50%;
   padding: 25px;
-  background: #050505;
+  background: transparent;
 }
 
 .modal-wrapper .modal-content .name {
@@ -265,8 +266,7 @@ nav .nav-links__small .nav-link__small {
   height: 50px;
   background: pink;
   overflow: hidden;
-  margin-bottom: 30px;
-  margin-left: 2.5%;
+  margin-bottom: 15px;
 }
 
 .modal-wrapper .modal-content .name input {
@@ -276,8 +276,8 @@ nav .nav-links__small .nav-link__small {
   padding-top: 20px;
   border: none;
   outline: none;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#050505));
-  background: linear-gradient(to top, #000000, #050505);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#202020));
+  background: linear-gradient(to top, #000000, #202020);
 }
 
 .modal-wrapper .modal-content .name label {
@@ -296,7 +296,7 @@ nav .nav-links__small .nav-link__small {
   bottom: -1px;
   height: 100%;
   width: 100%;
-  border-bottom: 3px solid pink;
+  border-bottom: 3px solid #ff5ffc;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -307,10 +307,10 @@ nav .nav-links__small .nav-link__small {
 
 .modal-wrapper .modal-content .content-name {
   font-family: "Montserrat";
-  font-size: 1.5em;
+  font-size: 1em;
   color: white;
   position: absolute;
-  bottom: 5px;
+  bottom: 17px;
   left: 0px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -326,8 +326,8 @@ nav .nav-links__small .nav-link__small {
 .modal-wrapper .modal-content .name input:valid + .label-name .content-name {
   -webkit-transform: translateY(-1.2em);
           transform: translateY(-1.2em);
-  font-size: 1em;
-  color: white;
+  font-size: 0.8em;
+  color: #17beb9;
 }
 
 .modal-wrapper .modal-content .name input:focus + .label-name::after,
@@ -342,8 +342,7 @@ nav .nav-links__small .nav-link__small {
   height: 50px;
   background: pink;
   overflow: hidden;
-  margin-bottom: 30px;
-  margin-left: 2.5%;
+  margin-bottom: 15px;
 }
 
 .modal-wrapper .modal-content .email input {
@@ -353,8 +352,8 @@ nav .nav-links__small .nav-link__small {
   padding-top: 20px;
   border: none;
   outline: none;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#050505));
-  background: linear-gradient(to top, #000000, #050505);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#202020));
+  background: linear-gradient(to top, #000000, #202020);
 }
 
 .modal-wrapper .modal-content .email label {
@@ -373,7 +372,7 @@ nav .nav-links__small .nav-link__small {
   bottom: -1px;
   height: 100%;
   width: 100%;
-  border-bottom: 3px solid pink;
+  border-bottom: 3px solid #ff5ffc;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -384,10 +383,10 @@ nav .nav-links__small .nav-link__small {
 
 .modal-wrapper .modal-content .content-email {
   font-family: "Montserrat";
-  font-size: 1.5em;
+  font-size: 1em;
   color: white;
   position: absolute;
-  bottom: 5px;
+  bottom: 17px;
   left: 0px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -403,8 +402,8 @@ nav .nav-links__small .nav-link__small {
 .modal-wrapper .modal-content .email input:valid + .label-email .content-email {
   -webkit-transform: translateY(-1.2em);
           transform: translateY(-1.2em);
-  font-size: 1em;
-  color: white;
+  font-size: 0.8em;
+  color: #17beb9;
 }
 
 .modal-wrapper .modal-content .email input:focus + .label-email::after,
@@ -419,8 +418,7 @@ nav .nav-links__small .nav-link__small {
   height: 50px;
   background: pink;
   overflow: hidden;
-  margin-bottom: 30px;
-  margin-left: 2.5%;
+  margin-bottom: 15px;
 }
 
 .modal-wrapper .modal-content .message textarea {
@@ -430,8 +428,8 @@ nav .nav-links__small .nav-link__small {
   padding-top: 20px;
   border: none;
   outline: none;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#050505));
-  background: linear-gradient(to top, #000000, #050505);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#202020));
+  background: linear-gradient(to top, #000000, #202020);
 }
 
 .modal-wrapper .modal-content .message label {
@@ -450,7 +448,7 @@ nav .nav-links__small .nav-link__small {
   bottom: -1px;
   height: 100%;
   width: 100%;
-  border-bottom: 3px solid pink;
+  border-bottom: 3px solid #ff5ffc;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -461,10 +459,10 @@ nav .nav-links__small .nav-link__small {
 
 .modal-wrapper .modal-content .content-message {
   font-family: "Montserrat";
-  font-size: 1.5em;
+  font-size: 1em;
   color: white;
   position: absolute;
-  bottom: 5px;
+  bottom: 17px;
   left: 0px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -480,8 +478,8 @@ nav .nav-links__small .nav-link__small {
 .modal-wrapper .modal-content .message textarea:valid + .label-message .content-message {
   -webkit-transform: translateY(-1.2em);
           transform: translateY(-1.2em);
-  font-size: 1em;
-  color: white;
+  font-size: 0.8em;
+  color: #17beb9;
 }
 
 .modal-wrapper .modal-content .message textarea:focus + .label-message::after,
@@ -495,12 +493,12 @@ nav .nav-links__small .nav-link__small {
   height: 20vh;
   resize: none;
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: 0.95em;
 }
 
 .modal-wrapper .modal-content input {
   font-family: "Montserrat", sans-serif;
-  width: 75px;
+  width: 70px;
   height: 30px;
 }
 
@@ -516,6 +514,14 @@ nav .nav-links__small .nav-link__small {
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: center;
+}
+
+.modal-wrapper .modal-content .submit-btn {
+  position: absolute;
+  bottom: 25%;
+  left: calc((100% - 50px) / 2);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .footer {
@@ -536,12 +542,12 @@ nav .nav-links__small .nav-link__small {
 }
 
 .button {
-  width: 100px;
-  height: 40px;
+  width: 90px;
+  height: 25px;
   font-family: "Montserrat";
-  font-size: 0.8em;
+  font-size: 0.6em;
   letter-spacing: 2px;
-  font-weight: 900;
+  font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,7 +557,7 @@ nav .nav-links__small .nav-link__small {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1em;
+  margin: 10px;
   color: transparent;
   border: 1px solid transparent;
   -o-border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
@@ -575,12 +581,12 @@ nav .nav-links__small .nav-link__small {
 }
 
 .button__small {
-  width: 10%;
-  height: 3.3%;
+  width: 70px;
+  height: 30px;
   font-family: "Montserrat";
-  font-size: 1em;
-  letter-spacing: 3px;
-  font-weight: 900;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,8 +598,7 @@ nav .nav-links__small .nav-link__small {
           justify-content: center;
   margin: 15px;
   color: transparent;
-  padding-left: 0.2%;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   -o-border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
      border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
   border-image-slice: 1;
@@ -642,7 +647,9 @@ nav .nav-links__small .nav-link__small {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  justify-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -652,8 +659,8 @@ nav .nav-links__small .nav-link__small {
 .locations-container .card-container .classroom-card {
   z-index: 0;
   position: relative;
-  width: 300px;
-  height: 447px;
+  width: 250px;
+  height: 400px;
   margin: 20px;
   padding: 20px;
   background: #111111;

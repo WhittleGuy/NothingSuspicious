@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import Bert from "../classrooms/bert";
 import ButlerCarlton from "../classrooms/butler-carlton";
 import Cent from "../classrooms/cent";
@@ -16,7 +17,7 @@ import Toomey from "../classrooms/toomey";
 export default class Locations extends Component {
   render() {
     return (
-      <div className="main-content">
+      <>
         <div className="locations-container">
           <div className="card-container">
             <Bert />
@@ -29,12 +30,12 @@ export default class Locations extends Component {
             <Hss />
             <Library />
             <McNutt />
+            <Toomey />
             <Springfield />
             <StLouis />
-            <Toomey />
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }
