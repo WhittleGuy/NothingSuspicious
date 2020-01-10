@@ -1,0 +1,64 @@
+@import "./style/variables";
+
+//! General scss
+* {
+  font-family: "Lato", "Monserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: "Oswald", "Lato", "Monserrat", sans-serif;
+  transform: skew(15deg);
+  @include header-style;
+}
+
+h3 {
+  font-size: 3em;
+  font-family: "Oswald", "Lato", "Monserrat", sans-serif;
+  transform: skew(15deg);
+  @include header-style;
+  margin: 40px 0 20px 0;
+}
+
+p {
+  font-size: 1.5em;
+  font-family: "Montserrat";
+  color: white;
+  line-height: 1.7em;
+}
+
+a {
+  font-size: 1em;
+  font-family: "Montserrat";
+  color: $twitterBlue;
+  line-height: 1.7em;
+}
+
+.text-container {
+  width: 80%;
+  padding: 10px;
+  margin: 50px 0 50px 0;
+
+  i {
+    font-size: 0.8em;
+  }
+}
+
+.window {
+  min-height: 100vh;
+  width: 100%;
+  background: $secondary;
+  display: flex;
+  flex-direction: column;
+
+  .main-content {
+    width: calc(100% - 50px);
+  }
+}
+
+@import "./style/nav";
+@import "./style/home";
+@import "./style/twitter";
+@import "./style/footer";
+@import "./style/button";

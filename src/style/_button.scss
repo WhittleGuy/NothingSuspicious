@@ -1,0 +1,68 @@
+.button {
+  width: 150px;
+  height: 50px;
+
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  color: transparent;
+
+  border: 1px solid transparent;
+  border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
+  border-image-slice: 1;
+  background: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.5s ease;
+
+  outline: none;
+
+  text-decoration: none;
+
+  &:hover {
+    background: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
+    transition: all 0.5s ease;
+    color: #111111;
+
+    text-decoration: none;
+  }
+}
+
+.button__small {
+  width: 25px;
+  height: 25px;
+
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  color: transparent;
+
+  border: 1px solid transparent;
+  border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
+  border-image-slice: 1;
+  background: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.5s ease;
+
+  outline: none;
+
+  text-decoration: none;
+
+  &:hover {
+    background: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
+    transition: all 0.5s ease;
+    color: #111111;
+    text-decoration: none;
+  }
+}

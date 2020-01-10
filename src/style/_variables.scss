@@ -1,0 +1,17 @@
+//! Variable declarations
+
+$primary: #111111;
+$secondary: #181818;
+
+$twitterBlue: #1da1f2;
+
+@mixin header-style {
+  color: white;
+  text-shadow: 3px -3px blue, -3px 3px red;
+}
+
+@mixin grid-center {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}

@@ -1,0 +1,10 @@
+.footer {
+  width: 100%;
+  height: 10vh;
+  padding: 0 10%;
+  background: $primary;
+  left: 50px;
+  @include grid-center;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: inset 0px 3px rgba(255, 255, 255, 0.1);
+}
