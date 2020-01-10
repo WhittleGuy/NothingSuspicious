@@ -12,6 +12,7 @@ function App() {
       <div className="window">
         <Nav />
         <Main />
+
         <Footer />
       </div>
     </HashRouter>

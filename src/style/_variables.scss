@@ -15,3 +15,73 @@ $twitterBlue: #1da1f2;
   align-content: center;
   justify-items: center;
 }
+
+@mixin form-field($field, $type) {
+  .#{$field} {
+    width: 95%;
+    position: relative;
+    height: 50px;
+    background: $tertiary;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-left: 2.5%;
+  }
+
+  .#{$field} #{$type} {
+    width: 100%;
+    height: 100%;
+    color: $tertiary;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to top, $primary, $secondary);
+  }
+
+  .#{$field} label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .#{$field} label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid $tertiary;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .content-#{$field} {
+    font-family: $paraFont;
+    font-size: $paraSize;
+    color: white;
+
+    @media screen and (max-width: 1000px) {
+      font-size: $paraSize/2;
+    }
+
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+  }
+
+  .#{$field} #{$type}:focus + .label-#{$field} .content-#{$field},
+  .#{$field} #{$type}:valid + .label-#{$field} .content-#{$field} {
+    transform: translateY(-1.2em);
+    font-size: 1em;
+    color: $tertiary;
+  }
+
+  .#{$field} #{$type}:focus + .label-#{$field}::after,
+  .#{$field} #{$type}:valid + .label-#{$field}::after {
+    transform: translateX(0%);
+  }
+}

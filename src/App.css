@@ -223,6 +223,301 @@ nav .nav-links__small .nav-link__small {
   margin: auto;
 }
 
+.modal-wrapper {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 45px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-wrapper .close-button {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+}
+
+.modal-wrapper .modal-content {
+  width: 80%;
+  min-height: 50%;
+  padding: 25px;
+  background: #050505;
+}
+
+.modal-wrapper .modal-content .name {
+  width: 95%;
+  position: relative;
+  height: 50px;
+  background: pink;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-left: 2.5%;
+}
+
+.modal-wrapper .modal-content .name input {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#050505));
+  background: linear-gradient(to top, #000000, #050505);
+}
+
+.modal-wrapper .modal-content .name label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.modal-wrapper .modal-content .name label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid pink;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.modal-wrapper .modal-content .content-name {
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-wrapper .modal-content .content-name {
+    font-size: 0.75em;
+  }
+}
+
+.modal-wrapper .modal-content .name input:focus + .label-name .content-name,
+.modal-wrapper .modal-content .name input:valid + .label-name .content-name {
+  -webkit-transform: translateY(-1.2em);
+          transform: translateY(-1.2em);
+  font-size: 1em;
+  color: white;
+}
+
+.modal-wrapper .modal-content .name input:focus + .label-name::after,
+.modal-wrapper .modal-content .name input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.modal-wrapper .modal-content .email {
+  width: 95%;
+  position: relative;
+  height: 50px;
+  background: pink;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-left: 2.5%;
+}
+
+.modal-wrapper .modal-content .email input {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#050505));
+  background: linear-gradient(to top, #000000, #050505);
+}
+
+.modal-wrapper .modal-content .email label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.modal-wrapper .modal-content .email label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid pink;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.modal-wrapper .modal-content .content-email {
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-wrapper .modal-content .content-email {
+    font-size: 0.75em;
+  }
+}
+
+.modal-wrapper .modal-content .email input:focus + .label-email .content-email,
+.modal-wrapper .modal-content .email input:valid + .label-email .content-email {
+  -webkit-transform: translateY(-1.2em);
+          transform: translateY(-1.2em);
+  font-size: 1em;
+  color: white;
+}
+
+.modal-wrapper .modal-content .email input:focus + .label-email::after,
+.modal-wrapper .modal-content .email input:valid + .label-email::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.modal-wrapper .modal-content .message {
+  width: 95%;
+  position: relative;
+  height: 50px;
+  background: pink;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-left: 2.5%;
+}
+
+.modal-wrapper .modal-content .message textarea {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#050505));
+  background: linear-gradient(to top, #000000, #050505);
+}
+
+.modal-wrapper .modal-content .message label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.modal-wrapper .modal-content .message label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid pink;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.modal-wrapper .modal-content .content-message {
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-wrapper .modal-content .content-message {
+    font-size: 0.75em;
+  }
+}
+
+.modal-wrapper .modal-content .message textarea:focus + .label-message .content-message,
+.modal-wrapper .modal-content .message textarea:valid + .label-message .content-message {
+  -webkit-transform: translateY(-1.2em);
+          transform: translateY(-1.2em);
+  font-size: 1em;
+  color: white;
+}
+
+.modal-wrapper .modal-content .message textarea:focus + .label-message::after,
+.modal-wrapper .modal-content .message textarea:valid + .label-message::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.modal-wrapper .modal-content .message,
+.modal-wrapper .modal-content .message textarea {
+  height: 20vh;
+  resize: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+
+.modal-wrapper .modal-content input {
+  font-family: "Montserrat", sans-serif;
+  width: 75px;
+  height: 30px;
+}
+
+.modal-wrapper .modal-content .content-message {
+  height: 50px;
+  top: 0.9em;
+}
+
+.modal-wrapper .modal-content .submit-button-field {
+  display: -ms-grid;
+  display: grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+}
+
 .footer {
   width: 100%;
   height: 10vh;
@@ -280,12 +575,12 @@ nav .nav-links__small .nav-link__small {
 }
 
 .button__small {
-  width: 25px;
-  height: 25px;
+  width: 10%;
+  height: 3.3%;
   font-family: "Montserrat";
-  font-size: 1.2rem;
+  font-size: 1em;
   letter-spacing: 3px;
-  font-weight: 500;
+  font-weight: 900;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,9 +590,10 @@ nav .nav-links__small .nav-link__small {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1em;
+  margin: 15px;
   color: transparent;
-  border: 1px solid transparent;
+  padding-left: 0.2%;
+  border: 2px solid transparent;
   -o-border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
      border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
   border-image-slice: 1;
